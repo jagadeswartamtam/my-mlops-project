@@ -1,0 +1,8 @@
+stages:
+  cleanup:
+    cmd: python process.py
+    deps:
+    - dataset.csv
+    - process.py
+    outs:
+    - processed_data.csv
