@@ -6,3 +6,10 @@ stages:
     - process.py
     outs:
     - processed_data.csv
+  train:
+    cmd: python train.py
+    deps:
+    - processed_data.csv
+    - train.py
+    metrics:
+    - metrics.json
